@@ -55,7 +55,7 @@ I converted the streamed data on the client to an array of JS objects.
 In the view I have used a standard HTML table along with the ng-repeat directive to populate the table body:
 
 <pre>
-&lt;tr ng-repeat="item in dataArr track by item.st" ng-model="$scope.dataArr"&gt;
+&lt;tr ng-repeat="item in dataArr track by item.st" &gt;
 ...
 &lt;/tr&gt;
 </pre>
