@@ -23,51 +23,44 @@ http://stackoverflow.com/questions/18619740/how-to-add-a-search-box-with-icon-to
 		    =======================================================-->
 		    <tab heading="Portfolio">Static Portfolio content
 
-		    <!-- Search Form -->
-		    <div class="well">
-		    	<div class="row">
-		    		<div class=form-group>
-    				<div class="col-sm-6 col-xs-12 col-lg-3">
-	            		<form class="form-horizontal" role="form">
-	                		<div class="input-group">
-	                        	<input autofocus type="text" class="form-control" placeholder="Enter Ticker.." ng-model="stock">
-	                        	<span class="input-group-btn">
-	                        		<button type="submit" class="btn btn-danger" ng-click="addStock(stock)">Add Stock</button>
-              					</span>
-              					{{stock}}
-              				</div>
-	            		</form> <!-- @END form search -->
-	        		</div>
-	        		</div>
-	        	</div>
-	        </div>
+			    <!-- Search Form -->
+			    <div class="well">
+			    	<div class="row">
+			    		<div class=form-group>
+		    				<div class="col-sm-6 col-xs-12 col-lg-3">
+			            		<form class="form-horizontal" role="form">
+			                		<div class="input-group">
+			                        	<input autofocus type="text" class="form-control" placeholder="Enter Ticker.." ng-model="stock">
+			                        	<span class="input-group-btn">
+			                        		<button type="submit" class="btn btn-danger" ng-click="addStock(stock)">Add Stock</button>
+		              					</span>
+		              					{{stock}}
+		              				</div>
+			            		</form> <!-- @END form search -->
+			        		</div>
+		        		</div>
+		        	</div>
+		        </div>
 
+				<table class="table table-striped table-bordered table-condensed">
+					<thead>
+					  <tr>
+					  	<th>No.</th>
+					    <th>Stock Code</th>
+					    <th>Last Price</th>
+					  </tr>
+					</thead>
 
-			<table class="table table-striped table-bordered table-condensed">
-				<thead>
-				  <tr>
-				  	<th>No.</th>
-				    <th>Stock Code</th>
-				    <th>Last Price</th>
-				  </tr>
-				</thead>
+					<tbody class="stock-list">
 
-				<tbody class="stock-list">
+					    <tr ng-repeat="data in myPortfolio track by $index"  >
+					    	<td>{{$index + 1}}</td>
+	    					<td>{{data.symbol}}</td>
+	    					<td>{{data.price}}</td>
+						</tr>
 
-
-				    <tr ng-repeat="data in myPortfolio track by $index"  >
-				    	<td>{{$index + 1}}</td>
-    					<td>{{data.symbol}}</td>
-    					<td>{{data.price}}</td>
-					</tr>
-
-
-				</tbody>
-
-			</table>
-
-
-
+					</tbody>
+				</table>
 
 		    </tab>
 
@@ -128,37 +121,32 @@ http://stackoverflow.com/questions/18619740/how-to-add-a-search-box-with-icon-to
 			    <div ng-controller="ChatCtrl">
 			    	<p><button class="btn btn-info btn-large btn-primary" type="button" id="join-chat" ng-click="joinChat()">Join Chat</button></p>
 
-
-						<!-- =====================================================================
-					  	ChatRoom Message Box
-					    (every 2nd row shall use css dark class)
-					  	====================================================================== -->
-					  	<hr>
-					  	<div class="row">
-					      <div class="col-md-offset-2 col-md-8 col-md-offset-2">
-					  		  <h3 class="text-center"><strong>Messages</strong></h3>
-					        <div id="messages">
-					          <ul>
-					            <li class="list-unstyled" ng-repeat="message in messages track by $index" 
-					  				    ng-cloak autoscroll ng-class="{dark: $index % 2 === 0}">
-					  				    <strong ng-bind="message.user">:</strong> <em ng-bind="message.text"></em>
-					  				  </li>
-					          </ul>
-					        </div>
-					      </div>
-					  	</div>
+					<!-- =====================================================================
+				  	ChatRoom Message Box
+				    (every 2nd row shall use css dark class)
+				  	====================================================================== -->
+				  	<hr>
+				  	<div class="row">
+				      <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+				  		  <h3 class="text-center"><strong>Messages</strong></h3>
+				        <div id="messages">
+				          <ul>
+				          	<li class="list-unstyled" ng-repeat="message in messages track by $index" 
+				  				    ng-cloak autoscroll ng-class="{dark: $index % 2 === 0}">
+				  				    <strong ng-bind="message.user">:</strong> <em ng-bind="message.text"></em>
+				  			</li>
+				          </ul>
+				        </div>
+				      </div>
+				  	</div>
 
 					<hr>
 
-
 					<p><input type="text" class="input-lg col-md-12 chat-widget" ng-model="message" placeholder="Enter message" ng-required></p>
-
-
 					<p><button type="submit" class="btn btn-primary chat-widget" id="send-chat" ng-click="sendMessage()">Send</button></p>
 
 					<!-- Online Label & user labels to indicate users that are connected to chat -->
 					<p><span class="label label-info chat-widget" id="online">Online:</span><div id="users"></div></p>
-
 					
 				</div>
 		    </tab>
@@ -184,10 +172,7 @@ http://stackoverflow.com/questions/18619740/how-to-add-a-search-box-with-icon-to
 						</p>
 					</div>
 				</div>
-
 		    </tab>
-
-
 
 		  </tabset>
 

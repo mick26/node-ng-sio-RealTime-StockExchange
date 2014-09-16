@@ -54,9 +54,10 @@ I converted the streamed data on the client to an array of JS objects.
 
 In the view I have used a standard HTML table along with the ng-repeat directive to populate the table body:
 
-<pre><tr ng-repeat="item in dataArr track by item.st" ng-model="$scope.dataArr">
+<pre>
+&lt;tr ng-repeat="item in dataArr track by item.st" ng-model="$scope.dataArr"&gt;
 ...
-</tr>
+&lt;/tr&gt;
 </pre>
 
 
@@ -66,7 +67,7 @@ Basically without setting a proper 'track by' index. No new data will have the $
 
 I have selected to 'track by item.st' - item.st is the name of the stock. It is unique to each stock. 
 
-Other alternatives to standard html5 tables which may better suite suite larger data sets are:
+Other alternatives to standard html5 tables are:
 - ngTable
 - trNgGrid
 - Smart Table
