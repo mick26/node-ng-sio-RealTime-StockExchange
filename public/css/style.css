@@ -1,0 +1,116 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.btn-xlg {
+  padding: 10px 16px;
+  font-size: 25px;
+  line-height: 2.33;
+  border-radius: 6px;
+}
+
+
+
+
+
+/*
+http://stackoverflow.com/questions/19608873/how-to-include-glyphicons-in-bootstrap-3
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("url(/css/fonts/glyphicons-halflings-regular.eot)");
+}
+*/
+@font-face {  
+  font-family: 'Glyphicons Halflings';  
+  font-family: 'Glyphicons Halflings';
+    src: url('../bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot');
+    src: url('../bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+    url('../bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff') format('woff'), 
+    url('../bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
+    url('../bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+
+/* See more at: http://www.w3resource.com/twitter-bootstrap/glyphicons.php#sthash.TE9pbUPk.dpuf */
+.glyphicon {  
+  font-size: 3.2em;
+  position: relative;  
+  top: 1px;  
+  /*display: inline-block;  */
+  /*font-family: 'Glyphicons Halflings';  */
+  -webkit-font-smoothing: antialiased;  
+  /*font-style: normal;  */
+  /*font-weight: normal;  */
+  /*line-height: 1;   */
+}  
+
+/* To get ui-bootstrap modal working 
+Ref. http://stackoverflow.com/questions/16265844/invoking-modal-window-in-angularjs-bootstrap-ui-using-javascript */
+
+.modal {
+    display: block;
+}
+.modal-body:before,
+.modal-body:after {
+    display: table;
+    content: " ";
+}
+.modal-header:before,
+.modal-header:after {
+    display: table;
+    content: " ";
+}
+
+/* To get ui-bootstrap tabs working
+In AngularJS adding empty href attributes to link tags will cause unwanted route changes. 
+This is why we need to remove empty href attributes from directive templates and as a result styling is not applied correctly. 
+http://angular-ui.github.io/bootstrap/
+*/
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+
+/*-------------------------*/
+
+#messages {
+  overflow-y: scroll;
+  height: 200px;
+  word-wrap: break-word;
+  min-height: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+
+#messages ul {
+  margin: 0;
+  padding-left: 5px;
+}
+#messages li {
+  padding: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.dark {
+  background-color: #f1f1f1;
+}
+
+/*************************************************/
+/*Stockmarket Tab - width of td <div> as % or column width */
+
+.trade-button {
+  width: 100%;
+}
+
+

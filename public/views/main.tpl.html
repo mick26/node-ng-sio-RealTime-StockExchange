@@ -1,0 +1,142 @@
+<!-- 
+http://getbootstrap.com/components/
+http://angular-ui.github.io/bootstrap/
+https://github.com/angular-ui/bootstrap/issues/743
+
+-->
+
+<!DOCTYPE html>
+
+<!-- ================================================================  -->
+
+ <div class="container">
+
+	<div class="jumbotron text-center"><h1>Stockmarket App</h1>
+		<p class="">Welcome to Mick's NodeJS and AngularJS Stockmarket</p>
+		<div class="row">
+
+			<div class="col-sm-6 col-offset-1 text-left">
+				<div class="span6"> 
+				<span class="glyphicon glyphicon-stats"></span>
+				    <h2>Real Prices</h2>
+				    <p>Here you will be able to sign up for an account and 
+				      create a stock portfolio with live prices. This will 
+				      combine the beauty of Bootstrap with the performance of 
+				      Node.js to create a well designed, blazing fast stock 
+				      tracking tool.
+				    </p>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-offset-1 text-left">
+			  	<div class="span6"> <span class="glyphicon glyphicon-briefcase"></span>
+				    <h2>Live Data</h2>
+				    <p>We will also construct a dummy portfolio to show you how 
+				      to stream real-time data straight into your browser. Once 
+				      you have mastered the basics you will be able to stream 
+				      any type of data from tweets, to chat to auction data.
+				    </p>
+				</div>
+			</div>
+		</div> <!-- @END/ .row --> 
+
+	</div>
+
+
+ 	<!-- ==================================================================
+ 	Modal - Register 
+ 	=================================================================== -->
+
+ 	<div class="row">
+
+		<div ng-controller="ModalRegisterCtrl" class="col-md-2 col-offset-1">
+
+		    <script type="text/ng-template" id="myModalRegContent.html">
+
+			    <div class="modal-header">
+			       <h3 class="modal-title">Register!</h3>
+			    </div>
+
+				<!-- ng-submit="submit()" -->
+
+
+  				<form id="signup-form"  method="post" >
+
+					<div class="modal-body">
+
+						<div class="form-group">
+							<label>Username</label>
+						<input type="text" placeholder="Username" class="form-control" name="username" ng-model="user.username"/>
+						<!--    <span id="imagePlaceHolder"></span> -->
+						</div>
+
+						<div class="form-group">
+						<label>Email</label>
+						<input type="email" placeholder="Email" class="form-control" name="email" ng-model="user.email"/>
+						</div>
+
+						<div class="form-group">
+							<label>Password</label>
+						<input type="password" placeholder="Password" class="form-control" name="password" ng-model="user.password"/>
+						</div>
+
+					</div>
+
+					<div class="modal-footer">
+				      <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+				      <button class="btn btn-primary" ng-click="register()">Register</button>
+				    </div>
+
+				  </form>
+
+		    </script>
+
+		    <button class="btn btn-danger btn-xlg" ng-click="open({username:'', email:'', password:''})">Register!</button>
+
+		</div>
+
+	 	<!-- ==================================================================
+	 	Modal - Login
+	 	=================================================================== -->
+		<div ng-controller="ModalLoginCtrl" class="col-md-2 col-offset-1">
+
+		    <script type="text/ng-template" id="myModalLoginContent.html">
+		   
+				<div class="modal-header">
+			       <h3 class="modal-title">Login!</h3>
+			    </div>
+			
+
+				<form id="login-form" method="post">
+		    	      
+				    <div class="modal-body">
+		
+	         			<div class="form-group">
+			          		<label>Enter Username</label>
+			            	<input type="text" placeholder="Username" class="form-control" name="username" ng-model="user.username"/>
+			            	<span id="imagePlaceHolder"></span>
+			          	</div>
+
+			          	<div class="form-group">
+			          		<label>Enter Password</label>
+			            	<input type="password" placeholder="Password" class="form-control" name="password" ng-model="user.password"/>
+			          	</div>
+
+		
+				    </div>
+
+				    <div class="modal-footer">
+				      <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+				      <button class="btn btn-primary" ng-click="login()">Log In</button>	
+				    </div>
+
+				</form> 
+
+			</script>
+
+			<button class="btn btn-primary btn-xlg" ng-click="open({username:'', password:''})">Login!</button>
+
+		</div>
+
+	</div> <!-- @END/ .row -->
+</div>
