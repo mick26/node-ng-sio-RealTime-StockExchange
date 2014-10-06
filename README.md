@@ -104,21 +104,40 @@ Other alternatives to standard html5 tables are:
 
 
 <div align="center">
-		<img width="47%" src="screen-shots/home.png" alt="Home Screen" title="Home Screen"</img>
-		<img width="5px" height="0px" </img>
-		<img width="47%" src="screen-shots/portfolio.png" alt="Portfolio Screen" title="Portfolio Screen"</img>
-</div>
-<div align="center">
-		<img width="47%" src="screen-shots/realtime.png" alt="Real Time Trades" title="Real Time Trades"</img>
-		<img width="5px" height="0px" </img>
-		<img width="47%" src="screen-shots/chat.png" alt="Chat Screen" title="Chat Screen"</img>
-</div>
-<div align="center">
-		<img width="47%" src="screen-shots/account.png" alt="Update Email" title="Update Email"</img>
+		<img width="100%" src="screen-shots/home.png" alt="Home Screen" title="Home Screen"</img>
 </div>
 
+<div align="center">
+		<img width="0px" height="10px" </img>
+</div>
 
-<hr>
+<div align="center">
+		<img width="100%" src="screen-shots/portfolio.png" alt="Portfolio Screen" title="Portfolio Screen"</img>
+</div>
+<div align="center">
+		<img width="0px" height="10px" </img>
+</div>
+
+<div align="center">
+		<img width="100%" src="screen-shots/realtime.png" alt="Real Time Trades" title="Real Time Trades"</img>
+</div>
+
+<div align="center">
+		<img width="0px" height="10px" </img>
+</div>
+
+<div align="center">
+		<img width="100%" src="screen-shots/chat.png" alt="Chat Screen" title="Chat Screen"</img>
+</div>
+
+<div align="center">
+		<img width="0px" height="10px" </img>
+</div>
+
+<div align="center">
+		<img width="100%" src="screen-shots/account.png" alt="Update Email" title="Update Email"</img>
+</div>
+
 
 <hr>
 
