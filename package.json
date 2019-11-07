@@ -12,7 +12,7 @@
     "express": "~4.7.1",
     "express-session": "~1.7.2",
     "jquery": "1.7.3",
-    "method-override": "~2.1.2",
+    "method-override": "~3.0.0",
     "mongodb": "~1.4.7",
     "morgan": "~1.2.2",
     "path": "~0.4.9",
